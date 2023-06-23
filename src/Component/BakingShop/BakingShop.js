@@ -25,7 +25,7 @@ const BakingShop = () => {
         }
         else if(selected.find(o=>o.id===Item.id))
         {
-          alert("This Book is already added.");
+          alert("This item is already added.");
         }
         else if(selected.length<4)
         {
@@ -34,7 +34,7 @@ const BakingShop = () => {
         }
         else
         {
-          alert("You can't add more than 4 item");
+          alert("You can't add more than four items");
         }
       };
       const [modal, setModal] = useState(false);

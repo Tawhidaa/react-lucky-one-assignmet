@@ -4,11 +4,9 @@
   margin-left: 20px;
   text-shadow: black;
   font-family: 'Lato';
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border-radius: 0px 0px 8px 8px;
 }
-.header h1:hover
-{
-    color: rgb(255, 255, 255);
-    background-color: black;
-   
-}
+
 

@@ -30,6 +30,11 @@
     border-radius: 5px;
     border-color: rgb(255, 255, 255);
 }
+.choose-1-button:hover{
+    color: black;
+    background-color: white;
+    border-color: black;
+}
 .reset-item
 {
     padding: 5px 20px;
@@ -40,4 +45,37 @@
     border-color: rgb(255, 255, 255);
     margin-top: 3px;
     margin-bottom: 30px;
+}
+.reset-item:hover{
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+@media screen and (max-width:800px) {
+   .selected-container{
+    width: 280px;
+   }
+   .bookshop-container
+   {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media screen and (max-width:500px) {
+   .selected-container{
+    width: 280px;
+   }
+   .bookshop-container
+   {
+    display: grid;
+    grid-template-columns:1fr;
+  }
+  #bookcart
+  {
+      order: 2;
+  }
+  #selected-cart
+  {
+      order: 1;
+  }
 }
