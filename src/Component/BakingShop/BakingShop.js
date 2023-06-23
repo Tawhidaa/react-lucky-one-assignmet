@@ -4,7 +4,6 @@ import "./BakingShop.css"
 import SelectedBaking from '../SelectedBaking/SelectedBaking';
 import BakingModal from '../BakingModal/BakingModal';
 import Modal from "react-modal";
-// import { CgCloseR } from "react-icons/cg";
 
 const BakingShop = () => {
     const [baking, setBaking] = useState([]);
@@ -49,7 +48,7 @@ const BakingShop = () => {
     
       const resetItem = () => {
         if (selected.length === 0) {
-          alert("Select Book Item is empty");
+          alert("Selected Baking Item is empty");
         } else {
           const set = setSelected([]);
           return set;
@@ -86,27 +85,27 @@ const BakingShop = () => {
            ></SelectedBaking>
           ))}
           <button onClick={toggleModal} className="choose-1-button">
-            CHOOSE 1 FOR ME
+            Choose one for me
           </button>
-          <button onClick={resetItem} className="choose-again">
+          <button onClick={resetItem} className="reset-item">
             {" "}
-            RESET ITEM
+            Reset Item
           </button>
         </div>
 
         <Modal isOpen={modal} onRequestClose={closeModal} style={customStyles}>
           <button className="modal-close-button" onClick={closeModal}>
-            {/* <CgCloseR size={25} /> */}
+
           </button>
           {selected.length === 0 && (
             <div className="cart-warning">
-              <p> Select Book Item Empty </p>
+              <p>Please add to cart minimum two item's</p>
             </div>
           )}
           <BakingModal key={selected.id} selected={selected}></BakingModal>
         </Modal>
       </div>
-        // </div>
+   
     );
 };
 

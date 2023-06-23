@@ -5,7 +5,7 @@ const SelectedBaking = ({select}) => {
     return (
         <div className='select-item'>
       <img src={img} alt="" />
-      <h3>{name}</h3>
+      <h5>{name}</h5>
     </div>
     );
 };
