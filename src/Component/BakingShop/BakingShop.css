@@ -52,30 +52,30 @@
     border-color: black;
 }
 @media screen and (max-width:800px) {
-   .selected-container{
-    width: 280px;
+    .selected-container{
+     width: 280px;
+    }
+    .bookshop-container
+    {
+     display: grid;
+     grid-template-columns:1fr 1fr;
    }
-   .bookshop-container
-   {
-    display: grid;
-    grid-template-columns:1fr 1fr;
-  }
-}
-@media screen and (max-width:500px) {
-   .selected-container{
-    width: 280px;
+ }
+ @media screen and (max-width:500px) {
+    .selected-container{
+     width: 280px;
+    }
+    .bakingshop-container
+    {
+     display: grid;
+     grid-template-columns:1fr;
    }
-   .bookshop-container
+   #bakingcart
    {
-    display: grid;
-    grid-template-columns:1fr;
-  }
-  #bookcart
-  {
-      order: 2;
-  }
-  #selected-cart
-  {
-      order: 1;
-  }
-}
+       order: 2;
+   }
+   #selected-cart
+   {
+       order: 1;
+   }
+ }
