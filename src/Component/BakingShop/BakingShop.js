@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import BakingCart from '../BakingCart/BakingCart';
 import "./BakingShop.css"
 import SelectedBaking from '../SelectedBaking/SelectedBaking';
-
-
+import BakingModal from '../BakingModal/BakingModal';
+import Modal from "react-modal";
+// import { CgCloseR } from "react-icons/cg";
 
 const BakingShop = () => {
     const [baking, setBaking] = useState([]);
@@ -38,6 +39,35 @@ const BakingShop = () => {
         }
       };
       const [modal, setModal] = useState(false);
+      const toggleModal = () => {
+        setModal(true);
+      };
+    
+      const closeModal = () => {
+        setModal(false);
+      };
+    
+      const resetItem = () => {
+        if (selected.length === 0) {
+          alert("Select Book Item is empty");
+        } else {
+          const set = setSelected([]);
+          return set;
+        }
+      };
+      const customStyles = {
+        content: {
+          top: "50%",
+          left: "50%",
+          right: "auto",
+          bottom: "auto",
+          marginRight: "-50%",
+          transform: "translate(-50%, -50%)",
+          height: "130px",
+          width: "300px",
+          overflow: "auto",
+        },
+      };
     return (
      
              <div className="bakingshop-container">
@@ -66,14 +96,14 @@ const BakingShop = () => {
 
         <Modal isOpen={modal} onRequestClose={closeModal} style={customStyles}>
           <button className="modal-close-button" onClick={closeModal}>
-            <CgCloseR size={25} />
+            {/* <CgCloseR size={25} /> */}
           </button>
           {selected.length === 0 && (
             <div className="cart-warning">
               <p> Select Book Item Empty </p>
             </div>
           )}
-          <BookModel key={selected.id} selected={selected}></BookModel>
+          <BakingModal key={selected.id} selected={selected}></BakingModal>
         </Modal>
       </div>
         // </div>
